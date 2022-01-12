@@ -1,0 +1,78 @@
+body{
+    font-family: "Roboto", serif;
+    font-size: 16px;
+
+}
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100px;
+    width: 100%;
+    background-color: black;
+    box-shadow: black 0 0 10px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.button-block {
+    box-sizing: border-box;
+    margin: 10px;
+    height: 50px;
+    width: 150px;
+    border-radius: 5px;
+    background-color: darkgray;
+    box-shadow: white 0 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+}
+.button-block:hover{
+    box-shadow: aquamarine 0 0 10px;
+}
+.main {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.default-color{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+
+}
+.hex-color{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 50%;
+}
+
+
+
+
+
+.footer {
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    box-shadow: black 0 0 10px;
+}
