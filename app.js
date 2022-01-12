@@ -17,7 +17,6 @@ function getRandomHex() {
 }
 
 function setColor(color) {
-    console.log(11)
     if( color === 'black' || color === 'purple'){
         this.style.color = 'white';
     } else {
@@ -31,7 +30,6 @@ if(localCurrentDefaultColor) setColor.bind(defaultColor, localCurrentDefaultColo
 if(localCurrentHexColor) setColor.bind(hexColor, localCurrentHexColor)();
 
 buttonDefault.addEventListener('click', function (){
-    console.log(2)
     let randomNum = Math.floor(Math.random() * (defaultColorsArray.length - 1));
     localStorage.setItem('defaultColor', defaultColorsArray[randomNum]);
     localCurrentDefaultColor = localStorage.getItem('defaultColor')
@@ -40,7 +38,6 @@ buttonDefault.addEventListener('click', function (){
 })
 
 buttonHex.addEventListener('click', function (){
-    console.log(1)
     let currentHex = getRandomHex();
     setColor.bind(hexColor, currentHex)();
     localStorage.setItem('hexColor', currentHex);
