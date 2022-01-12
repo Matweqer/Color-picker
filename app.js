@@ -3,8 +3,8 @@ let buttonDefault = document.querySelector('.button-default'),
     defaultColor =  document.querySelector('.default-color'),
     hexColor =      document.querySelector('.hex-color');
 
-let defaultColorsArray = ['red', 'orange', 'yellow', 'green', 'blue', 'purple', 'black', 'gray', 'white'];
-let hexArray =['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'];
+const defaultColorsArray = ['red', 'orange', 'yellow', 'green', 'blue', 'purple', 'black', 'gray', 'white'];
+const hexArray =['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'];
 let localCurrentDefaultColor = localStorage.getItem('defaultColor');
 let localCurrentHexColor = localStorage.getItem('hexColor')
 
@@ -37,8 +37,8 @@ buttonDefault.addEventListener('click', function (){
 
 })
 
-buttonHex.addEventListener('click', function (){
+buttonHex.addEventListener('click', function () {
     let currentHex = getRandomHex();
     setColor.bind(hexColor, currentHex)();
     localStorage.setItem('hexColor', currentHex);
-});
+})
