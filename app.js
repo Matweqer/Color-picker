@@ -16,29 +16,27 @@ function getRandomHex() {
     return hexColor;
 }
 
-function setColor(color) {
+function setColor(element, color) {
     if( color === 'black' || color === 'purple'){
-        this.style.color = 'white';
+        element.style.color = 'white';
     } else {
-        this.style.color = 'black';
+        element.style.color = 'black';
     }
-    this.style.backgroundColor = color;
-    this.textContent = color;
+    element.style.backgroundColor = color;
+    element.textContent = color;
 }
 
-if(localCurrentDefaultColor) setColor.bind(defaultColor, localCurrentDefaultColor)();
-if(localCurrentHexColor) setColor.bind(hexColor, localCurrentHexColor)();
+if(localCurrentDefaultColor) setColor(defaultColor, localCurrentDefaultColor);
+if(localCurrentHexColor) setColor(hexColor, localCurrentHexColor);
 
 buttonDefault.addEventListener('click', function (){
     let randomNum = Math.floor(Math.random() * (defaultColorsArray.length - 1));
+    setColor(defaultColor, defaultColorsArray[randomNum]);
     localStorage.setItem('defaultColor', defaultColorsArray[randomNum]);
-    localCurrentDefaultColor = localStorage.getItem('defaultColor')
-    setColor.bind(defaultColor, localCurrentDefaultColor)();
-
 })
 
 buttonHex.addEventListener('click', function () {
     let currentHex = getRandomHex();
-    setColor.bind(hexColor, currentHex)();
+    setColor(hexColor, currentHex);
     localStorage.setItem('hexColor', currentHex);
 })
