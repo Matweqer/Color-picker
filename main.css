@@ -1,16 +1,17 @@
-body{
-    font-family: "Roboto", serif;
-    font-size: 18px;
+*{
+    font-family: 'Dongle', sans-serif;
 }
-.header {
-    position: absolute;
-    top: 0;
-    left: 0;
+body{
+    margin: 0;
+    padding: 0;
+}
+header {
     height: 100px;
     width: 100%;
     background-color: black;
     box-shadow: black 0 0 10px;
-
+    position: absolute;
+    top: 0;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -19,60 +20,47 @@ body{
 .button-block {
     box-sizing: border-box;
     margin: 10px;
-    padding: 10px;
     height: 50px;
     width: 250px;
+    border: 0;
     border-radius: 5px;
     background-color: darkgray;
     box-shadow: white 0 0 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: block;
     text-align: center;
     cursor: pointer;
+    user-select: none;
+    font-size: 30px;
 }
 .button-block:hover{
-    box-shadow: aquamarine 0 0 10px;
+    box-shadow: white 0 0 15px;
 }
-.main {
-    font-size: 30px;
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    column-gap: 0;
     font-weight: bold;
+    font-size: 45px;
 }
-
-.default-color{
+.color-block{
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: -1;
-    position: absolute;
-    top: 0;
-    left: 0;
+    flex-wrap: nowrap;
     height: 100%;
-    width: 50%;
-
-}
-.hex-color{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    padding: 10px;
+    margin: 0;
+    box-sizing: border-box;
     z-index: -1;
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 50%;
 }
-
-
-
-
-
-.footer {
+footer {
     height: 100px;
     width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
     background-color: black;
     box-shadow: black 0 0 10px;
+    position: absolute;
+    bottom: 0;
 }

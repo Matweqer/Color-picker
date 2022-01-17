@@ -3,23 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Color Picker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <header class="header">
-        <div class="button-block button-default">
-            Сменить стандартный цвет
-        </div>
-        <div class="button-block button-hex">
-            Сменить HEX свет
-        </div>
+    <header>
+        <button class="button-block button-default">
+            change classic color
+        </button>
+        <button class="button-block button-hex">
+            change HEX color
+        </button>
+        <button class="button-block button-rgb">
+            change RGB color
+        </button>
     </header>
-    <div class="main">
-        <div class="default-color"></div>
-        <div class="hex-color"></div>
-    </div>
-    <footer class="footer">
-
+    <main>
+        <div class="color-block default-color"></div>
+        <div class="color-block hex-color"></div>
+        <div class="color-block rgb-color"></div>
+    </main>
+    <footer>
     </footer>
     <script src="app.js"></script>
 </body>
